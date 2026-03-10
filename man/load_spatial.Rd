@@ -2,13 +2,13 @@
 % Please edit documentation in R/load_spatial.R
 \name{load_spatial}
 \alias{load_spatial}
-\title{Load 10X Visium spatial transcriptomics data}
+\title{Load and standardize 10X Visium spatial transcriptomics data}
 \usage{
 load_spatial(
   data_dir,
+  sample_id,
   filename = "filtered_feature_bc_matrix.h5",
   assay = "Spatial",
-  slice,
   filter.matrix = TRUE,
   to.upper = FALSE
 )
@@ -16,19 +16,20 @@ load_spatial(
 \arguments{
 \item{data_dir}{Path to the Visium data directory}
 
+\item{sample_id}{Character. Unique sample identifier}
+
 \item{filename}{HDF5 file name}
 
 \item{assay}{Assay name (default: "Spatial")}
-
-\item{slice}{Slice name}
 
 \item{filter.matrix}{Logical; filter matrix}
 
 \item{to.upper}{Logical; convert gene names to upper case}
 }
 \value{
-A Seurat object
+A standardized Seurat object
 }
 \description{
-A wrapper around Seurat::Load10X_Spatial for simplified loading.
+Wrapper around Seurat::Load10X_Spatial with automatic
+metadata standardization for multi-sample workflows.
 }
