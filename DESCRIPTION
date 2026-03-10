@@ -10,4 +10,28 @@ Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.3
 Imports: 
-    Seurat
+    Seurat (>= 5.0.0),
+    CellChat,
+    dplyr,
+    ggplot2,
+    patchwork,
+    GPTCelltype,
+    ggrepel,
+    clusterProfiler,
+    enrichplot,
+    org.Mm.eg.db,
+    AnnotationDbi,
+    stats,
+    export,
+    DESeq2,
+    scales,
+    jsonlite
+Suggests:
+    Giotto,
+    scran,
+    SingleCellExperiment,
+    SummarizedExperiment,
+    terra,
+    geometry,
+    data.table,
+    spacexr
